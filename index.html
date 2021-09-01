@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+      <html>
+      <head>
+            <title>Button click handler</title>
+      </head>
+      <body>
+         <h1>Ring the Doorbell</h1>
+         <p id="main-text" class="orange" style="font-weight: bold;">
+               a bunch of really valuable text...
+         </p>
+         <button id="ring-button">Ring Bell</button>
+         <button id="greet-button">Greet Friends</button>
+         <script>
+            function youRang() {
+               document.getElementById("main-text").innerHTML += "you rang...";
+               console.log("you rang...");
+            }
+            function greetFriends(){
+              document.getElementById("main-text").innerHTML += "Hello Friends!";
+              console.log("Hello Friends!");
+            }
+            // Obtain a reference to the button element
+            let ring_button = document.getElementById("ring-button");
+            // Set named function youRang as the click event handler
+            ring_button.addEventListener("click", youRang);
+         </script>
+      </body>
+      </html>
